@@ -41,6 +41,10 @@
       "color": "#b66b24"
     },
     {
+      "name": "ルナトーン",
+      "color": "#81639d"
+    },
+    {
       "name": "ヨノワール",
       "color": "#4c478f"
     },
@@ -167,7 +171,8 @@
       "card": "メガルカリオex",
       "systems": [
         "ノココッチ",
-        "ソルロック"
+        "ソルロック",
+        "ルナトーン"
       ],
       "tier": 2,
       "id": "deck-008",
@@ -180,7 +185,8 @@
       ],
       "card": "メガルカリオex",
       "systems": [
-        "ソルロック"
+        "ソルロック",
+        "ルナトーン"
       ],
       "tier": 2,
       "id": "deck-009",
@@ -431,7 +437,8 @@
       "card": "フーディン",
       "systems": [
         "キチキギスex",
-        "シェイミ"
+        "シェイミ",
+        "ノココッチ"
       ],
       "tier": 4,
       "id": "deck-027",
@@ -445,8 +452,8 @@
       ],
       "card": "フーディン",
       "systems": [
-        "キチキギスex",
-        "ヨノワール"
+        "ヨノワール",
+        "キチキギスex"
       ],
       "tier": 4,
       "id": "deck-028",
@@ -459,48 +466,12 @@
       ],
       "card": "フーディン",
       "systems": [
+        "シェイミ",
         "ノココッチ"
       ],
       "tier": 4,
       "id": "deck-029",
       "originalName": "フーディン(スタン)"
-    },
-    {
-      "name": "フーディン",
-      "images": [
-        "https://www.pokemon-card.com/assets/images/card_images/large/M1S/047834_P_FUDEIN.jpg"
-      ],
-      "card": "フーディン",
-      "systems": [
-        "キチキギスex"
-      ],
-      "tier": 4,
-      "id": "deck-030",
-      "originalName": "フーディン(シェイミ抜き)"
-    },
-    {
-      "name": "フーディン",
-      "images": [
-        "https://www.pokemon-card.com/assets/images/card_images/large/M1S/047834_P_FUDEIN.jpg"
-      ],
-      "card": "フーディン",
-      "systems": [
-        "シェイミ"
-      ],
-      "tier": 4,
-      "id": "deck-031",
-      "originalName": "フーディン(キチキギスex抜き)"
-    },
-    {
-      "name": "フーディン",
-      "images": [
-        "https://www.pokemon-card.com/assets/images/card_images/large/M1S/047834_P_FUDEIN.jpg"
-      ],
-      "card": "フーディン",
-      "systems": [],
-      "tier": 4,
-      "id": "deck-032",
-      "originalName": "フーディン(シェイミ、キチキギスex抜き)"
     },
     {
       "name": "フーディン&ドデカバシ",
@@ -792,7 +763,8 @@
       ],
       "card": "イイネイヌ",
       "systems": [
-        "ソルロック"
+        "ソルロック",
+        "ルナトーン"
       ],
       "tier": 4,
       "id": "deck-053",
