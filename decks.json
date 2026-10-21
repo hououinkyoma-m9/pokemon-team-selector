@@ -61,7 +61,8 @@
         "ニャースex",
         "マシマシラ",
         "ヨノワール(カースドボム)"
-      ]
+      ],
+      "tier": 1
     },
     {
       "name": "ドラパ(ノココッチ)",
@@ -74,7 +75,8 @@
         "ニャースex",
         "マシマシラ",
         "ノココッチ"
-      ]
+      ],
+      "tier": 1
     },
     {
       "name": "ドラパ(バシャ)",
@@ -86,7 +88,8 @@
         "キチキギスex",
         "ニャースex",
         "マシマシラ"
-      ]
+      ],
+      "tier": 2
     },
     {
       "name": "ゾロアーク",
@@ -98,7 +101,8 @@
         "キチキギスex",
         "マシマシラ",
         "モモワロウex"
-      ]
+      ],
+      "tier": 2
     },
     {
       "name": "ゾロアークex(キチキギスex抜き)",
@@ -110,7 +114,8 @@
         "ニャースex",
         "マシマシラ",
         "モモワロウex"
-      ]
+      ],
+      "tier": 2
     },
     {
       "name": "ゾロアークex(キチキギスex、ニャースex抜き)",
@@ -121,7 +126,8 @@
       "systems": [
         "マシマシラ",
         "モモワロウex"
-      ]
+      ],
+      "tier": 2
     },
     {
       "name": "ヤドキング",
@@ -133,7 +139,42 @@
         "キチキギスex",
         "ニャースex",
         "メガガルーラex"
-      ]
+      ],
+      "tier": 2
+    },
+    {
+      "name": "メガルカリオ(ノココッチ型)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M2a/048614_P_MRUKARIOEX.jpg"
+      ],
+      "card": "メガルカリオex",
+      "systems": [
+        "ノココッチ",
+        "ソルロック"
+      ],
+      "tier": 2
+    },
+    {
+      "name": "メガルカリオ(スタン)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M2a/048614_P_MRUKARIOEX.jpg"
+      ],
+      "card": "メガルカリオex",
+      "systems": [
+        "ソルロック"
+      ],
+      "tier": 2
+    },
+    {
+      "name": "おまつりおんど",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SV6/045703_P_KAMITCHIXYU.jpg"
+      ],
+      "card": "カミッチュ",
+      "systems": [
+        "シェイミ"
+      ],
+      "tier": 2
     },
     {
       "name": "メガレックウザ",
@@ -146,7 +187,8 @@
         "ニャースex",
         "メガガルーラex",
         "ラティアスex"
-      ]
+      ],
+      "tier": 3
     },
     {
       "name": "メガドリュウズ",
@@ -157,7 +199,8 @@
       "systems": [
         "キチキギスex",
         "ゲノセクトex"
-      ]
+      ],
+      "tier": 3
     },
     {
       "name": "メガドリュウズex(キチキギスex抜き)",
@@ -167,7 +210,8 @@
       "card": "メガドリュウズex",
       "systems": [
         "ゲノセクトex"
-      ]
+      ],
+      "tier": 3
     },
     {
       "name": "タケルライコ",
@@ -180,7 +224,8 @@
         "ニャースex",
         "メガガルーラex",
         "ラティアスex"
-      ]
+      ],
+      "tier": 3
     },
     {
       "name": "カミツオロチ",
@@ -191,18 +236,8 @@
       "systems": [
         "キチキギスex",
         "ニャースex"
-      ]
-    },
-    {
-      "name": "オリーヴァ",
-      "images": [
-        "https://www.pokemon-card.com/assets/images/card_images/large/MC/048787_P_ORIVUAEX.jpg"
       ],
-      "card": "オリーヴァex",
-      "systems": [
-        "キチキギスex",
-        "ニャースex"
-      ]
+      "tier": 3
     },
     {
       "name": "ゲッコウガ",
@@ -213,7 +248,54 @@
       "systems": [
         "キチキギスex",
         "ニャースex"
-      ]
+      ],
+      "tier": 3
+    },
+    {
+      "name": "ばけがくれ(ミカルゲ抜き)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M5/050256_P_DADARIN.jpg"
+      ],
+      "card": "ダダリン",
+      "systems": [
+        "ノココッチ",
+        "ラティアスex",
+        "シェイミ"
+      ],
+      "tier": 3
+    },
+    {
+      "name": "ばけがくれ(ミカルゲ入り)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M5/050256_P_DADARIN.jpg"
+      ],
+      "card": "ダダリン",
+      "systems": [
+        "ラティアスex",
+        "シェイミ"
+      ],
+      "tier": 3
+    },
+    {
+      "name": "ガブリアス",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SV9a/047339_P_SHIRONANOGABURIASUEX.jpg"
+      ],
+      "card": "シロナのガブリアスex",
+      "systems": [],
+      "tier": 3
+    },
+    {
+      "name": "オリーヴァ",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/MC/048787_P_ORIVUAEX.jpg"
+      ],
+      "card": "オリーヴァex",
+      "systems": [
+        "キチキギスex",
+        "ニャースex"
+      ],
+      "tier": 4
     },
     {
       "name": "ブイズバレット",
@@ -223,7 +305,8 @@
       "card": "イーブイex",
       "systems": [
         "キチキギスex"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "ガルーラバレット",
@@ -236,7 +319,8 @@
         "ニャースex",
         "メガガルーラex",
         "ラティアスex"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "ストリンダーバレット",
@@ -247,7 +331,8 @@
       "systems": [
         "キチキギスex",
         "モモワロウex"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "フーディン",
@@ -258,7 +343,8 @@
       "systems": [
         "キチキギスex",
         "シェイミ"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "フーディン(ボム)",
@@ -269,7 +355,8 @@
       "systems": [
         "キチキギスex",
         "ヨノワール(カースドボム)"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "フーディン(スタン)",
@@ -279,7 +366,8 @@
       "card": "フーディン",
       "systems": [
         "ノココッチ"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "フーディン(シェイミ抜き)",
@@ -289,7 +377,8 @@
       "card": "フーディン",
       "systems": [
         "キチキギスex"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "フーディン(キチキギスex抜き)",
@@ -299,7 +388,8 @@
       "card": "フーディン",
       "systems": [
         "シェイミ"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "フーディン(シェイミ、キチキギスex抜き)",
@@ -307,7 +397,8 @@
         "https://www.pokemon-card.com/assets/images/card_images/large/M1S/047834_P_FUDEIN.jpg"
       ],
       "card": "フーディン",
-      "systems": []
+      "systems": [],
+      "tier": 4
     },
     {
       "name": "メガサメハダー",
@@ -318,7 +409,8 @@
       "systems": [
         "キチキギスex",
         "モモワロウex"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "メガフシギバナ",
@@ -329,7 +421,8 @@
       "systems": [
         "キチキギスex",
         "ニャースex"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "ソウブレイズ",
@@ -339,7 +432,8 @@
       "card": "ソウブレイズex",
       "systems": [
         "キチキギスex"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "ホップバレット",
@@ -351,7 +445,8 @@
         "キチキギスex",
         "ニャースex",
         "ラティアスex"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "ボムファイアロー",
@@ -365,7 +460,8 @@
         "メガガルーラex",
         "ラティアスex",
         "ヨノワール(カースドボム)"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "ダイゴのメタグロス",
@@ -377,7 +473,8 @@
         "キチキギスex",
         "ニャースex",
         "ゲノセクトex"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "ニダンギルバレット",
@@ -388,7 +485,8 @@
       "systems": [
         "キチキギスex",
         "ゲノセクトex"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "ニダンギルバレット(キチキギスex抜き)",
@@ -398,7 +496,8 @@
       "card": "ニダンギル",
       "systems": [
         "ゲノセクトex"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "メガスターミーメガユキメノコ",
@@ -409,7 +508,8 @@
       "card": "メガスターミーex ＋ メガユキメノコex",
       "systems": [
         "ニャースex"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "メガライボルトメガシビルドン",
@@ -420,7 +520,8 @@
       "card": "メガライボルトex ＋ メガシビルドンex",
       "systems": [
         "ニャースex"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "ボムドータクン",
@@ -433,7 +534,8 @@
         "メガガルーラex",
         "ラティアスex",
         "ヨノワール(カースドボム)"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "オーロンゲ",
@@ -444,7 +546,8 @@
       "systems": [
         "マシマシラ",
         "シェイミ"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "イワパレス(やすさん型)",
@@ -454,7 +557,8 @@
       "card": "イワパレス",
       "systems": [
         "マシマシラ"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "イワパレス(ガルーラ型)",
@@ -464,7 +568,8 @@
       "card": "イワパレス",
       "systems": [
         "メガガルーラex"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "メガリザードン",
@@ -475,30 +580,8 @@
       "systems": [
         "メガガルーラex",
         "ラティアスex"
-      ]
-    },
-    {
-      "name": "ばけがくれ(ミカルゲ抜き)",
-      "images": [
-        "https://www.pokemon-card.com/assets/images/card_images/large/M5/050256_P_DADARIN.jpg"
       ],
-      "card": "ダダリン",
-      "systems": [
-        "ノココッチ",
-        "ラティアスex",
-        "シェイミ"
-      ]
-    },
-    {
-      "name": "ばけがくれ(ミカルゲ入り)",
-      "images": [
-        "https://www.pokemon-card.com/assets/images/card_images/large/M5/050256_P_DADARIN.jpg"
-      ],
-      "card": "ダダリン",
-      "systems": [
-        "ラティアスex",
-        "シェイミ"
-      ]
+      "tier": 4
     },
     {
       "name": "メガミミロップ(ノココッチ型)",
@@ -508,7 +591,8 @@
       "card": "メガミミロップex",
       "systems": [
         "ノココッチ"
-      ]
+      ],
+      "tier": 4
     },
     {
       "name": "メガミミロップ(メガユキメノコノココッチ型)",
@@ -519,28 +603,8 @@
       "card": "メガミミロップex ＋ メガユキメノコex",
       "systems": [
         "ノココッチ"
-      ]
-    },
-    {
-      "name": "メガルカリオ(ノココッチ型)",
-      "images": [
-        "https://www.pokemon-card.com/assets/images/card_images/large/M2a/048614_P_MRUKARIOEX.jpg"
       ],
-      "card": "メガルカリオex",
-      "systems": [
-        "ノココッチ",
-        "ソルロック"
-      ]
-    },
-    {
-      "name": "メガルカリオ(スタン)",
-      "images": [
-        "https://www.pokemon-card.com/assets/images/card_images/large/M2a/048614_P_MRUKARIOEX.jpg"
-      ],
-      "card": "メガルカリオex",
-      "systems": [
-        "ソルロック"
-      ]
+      "tier": 4
     },
     {
       "name": "ひびきのバクフーン",
@@ -550,17 +614,8 @@
       "card": "ヒビキのバクフーン",
       "systems": [
         "ノココッチ"
-      ]
-    },
-    {
-      "name": "おまつりおんど",
-      "images": [
-        "https://www.pokemon-card.com/assets/images/card_images/large/SV6/045703_P_KAMITCHIXYU.jpg"
       ],
-      "card": "カミッチュ",
-      "systems": [
-        "シェイミ"
-      ]
+      "tier": 4
     },
     {
       "name": "イイネイヌ",
@@ -570,15 +625,8 @@
       "card": "イイネイヌ",
       "systems": [
         "ソルロック"
-      ]
-    },
-    {
-      "name": "ガブリアス",
-      "images": [
-        "https://www.pokemon-card.com/assets/images/card_images/large/SV9a/047339_P_SHIRONANOGABURIASUEX.jpg"
       ],
-      "card": "シロナのガブリアスex",
-      "systems": []
+      "tier": 4
     },
     {
       "name": "R団のドンカラス",
@@ -586,7 +634,8 @@
         "https://www.pokemon-card.com/assets/images/card_images/large/M2a/048625_P_ROKETTODANNODONKARASU.jpg"
       ],
       "card": "ロケット団のドンカラス",
-      "systems": []
+      "systems": [],
+      "tier": 4
     },
     {
       "name": "R団のミュウツー",
@@ -594,7 +643,8 @@
         "https://www.pokemon-card.com/assets/images/card_images/large/SV10/047432_P_ROKETTODANNOMIXYUUTSUEX.jpg"
       ],
       "card": "ロケット団のミュウツーex",
-      "systems": []
+      "systems": [],
+      "tier": 4
     },
     {
       "name": "メガシャンデラ",
@@ -602,7 +652,8 @@
         "https://www.pokemon-card.com/assets/images/card_images/large/M5/050255_P_MSHIXYANDERAEX.jpg"
       ],
       "card": "メガシャンデラex",
-      "systems": []
+      "systems": [],
+      "tier": 4
     },
     {
       "name": "オリーヴァメガユキメノコ",
@@ -611,7 +662,8 @@
         "https://www.pokemon-card.com/assets/images/card_images/large/M2a/048558_P_MYUKIMENOKOEX.jpg"
       ],
       "card": "オリーヴァex ＋ メガユキメノコex",
-      "systems": []
+      "systems": [],
+      "tier": 4
     }
   ]
 }
