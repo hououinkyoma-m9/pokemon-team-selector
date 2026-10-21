@@ -41,8 +41,20 @@
 }
 @media(max-width:360px){.deckname{font-size:9px}.slotname{font-size:10px}.deck .chip{font-size:8px}}
 .deckname,.slotname{line-height:1.35}.deckname br,.slotname br{display:block}
-</style></head><body><header class="hero"><h1>Pokémon Team masters 2027 Seoul環境</h1><p>デッキ選択ツール</p></header><main class="container"><div class="slots" id="slots"></div><section class="panel"><div class="status"><div class="stats" id="stats"></div><button class="reset" id="reset">選択をすべて解除</button></div><div id="summary" class="summary"></div><div class="chips" id="used"></div></section><section class="panel"><h2>デッキを選ぶ</h2><div class="selectslot" id="pickslot"></div><div class="controls"><input type="search" id="search" placeholder="デッキ名で検索（例：ドラパ、ルカリオ）"><label><input type="checkbox" id="onlyok" checked> 選択可能なデッキのみ表示</label></div><div class="tiertabs" id="tiertabs" role="group" aria-label="Tierで絞り込む"></div><div class="listbar"><div class="stats" id="resultcount"></div></div><div class="grid" id="decks"></div><nav class="pagination" id="pagination" aria-label="デッキ一覧のページ切り替え"></nav></section></main><footer class="sitefooter"><div>Pokémon Team masters 2027 Seoul環境</div><small>© 2026 Fan-made deck selection tool · Unofficial</small></footer><script>
+
+.langswitch{display:flex;gap:4px;align-items:center;flex-shrink:0}.langswitch button{border:1px solid #ffffff88;border-radius:7px;background:transparent;color:white;padding:7px 11px;font-weight:800;cursor:pointer}.langswitch button.active{background:white;color:#183c69}.heroinner{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.herocopy{min-width:0}
+@media(max-width:480px){.langswitch button{padding:6px 9px;font-size:12px}.hero h1{font-size:19px}}
+</style></head><body><header class="hero"><div class="heroinner"><div class="herocopy"><h1 id="heroTitle">Pokémon Team masters 2027 Seoul環境</h1><p id="heroSubtitle">デッキ選択ツール</p></div><div class="langswitch" role="group" aria-label="Language"><button type="button" data-lang="ja" class="active" aria-pressed="true">日本語</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div></div></header><main class="container"><div class="slots" id="slots"></div><section class="panel"><div class="status"><div class="stats" id="stats"></div><button class="reset" id="reset">選択をすべて解除</button></div><div id="summary" class="summary"></div><div class="chips" id="used"></div></section><section class="panel"><h2 id="pickHeading">デッキを選ぶ</h2><div class="selectslot" id="pickslot"></div><div class="controls"><input type="search" id="search" placeholder="デッキ名で検索（例：ドラパ、ルカリオ）"><label><input type="checkbox" id="onlyok" checked> <span id="onlyokLabel">選択可能なデッキのみ表示</span></label></div><div class="tiertabs" id="tiertabs" role="group" aria-label="Tierで絞り込む"></div><div class="listbar"><div class="stats" id="resultcount"></div></div><div class="grid" id="decks"></div><nav class="pagination" id="pagination" aria-label="デッキ一覧のページ切り替え"></nav></section></main><footer class="sitefooter"><div id="footerTitle">Pokémon Team masters 2027 Seoul環境</div><small>© 2026 Fan-made deck selection tool · Unofficial</small></footer><script>
 let DATA={groups:[],decks:[]};
+const enNames={
+'Nのゾロアークex':"N's Zoroark ex",'おまつりおんど':'Festival Lead','ばけがくれ':'Seaweed Hideaway','ミカルゲ':'Spiritomb','ひびきのバクフーン':"Ethan's Typhlosion",'イイネイヌ':'Okidogi','イワパレス':'Crustle','メガガルーラex':'Mega Kangaskhan ex','イーブイexバレット':'Eevee ex Toolbox','オリーヴァex':'Arboliva ex','メガユキメノコex':'Mega Froslass ex','カミツオロチex':'Hydrapple ex','ゲッコウガex':'Greninja ex','シロナのガブリアスex':"Cynthia's Garchomp ex",'ストリンダーバレット':'Toxtricity Toolbox','ソウブレイズex':'Ceruledge ex','タケルライコex':'Raging Bolt ex','ダイゴのメタグロスex':"Steven's Metagross ex",'ドラパルトex':'Dragapult ex','ノココッチ':'Dudunsparce','バシャーモex':'Blaziken ex','ヨノワール':'Dusknoir','ドータクン':'Bronzong','ニダンギルバレット':'Doublade Toolbox','ファイアローex':'Talonflame ex','フーディン':'Alakazam','ドデカバシ':'Toucannon','ホップのザシアンex':"Hop's Zacian ex",'マリィのオーロンゲex':"Marnie's Grimmsnarl ex",'メガガルーラexバレット':'Mega Kangaskhan ex Toolbox','メガサメハダーex':'Mega Sharpedo ex','メガシャンデラex':'Mega Chandelure ex','メガスターミーex':'Mega Starmie ex','メガドリュウズex':'Mega Excadrill ex','メガフシギバナex':'Mega Venusaur ex','メガミミロップex':'Mega Lopunny ex','メガライボルトex':'Mega Manectric ex','メガシビルドンex':'Mega Eelektross ex','メガリザードンXex':'Mega Charizard X ex','メガルカリオex':'Mega Lucario ex','メガレックウザex':'Mega Rayquaza ex','ヤドキング':'Slowking','ロケット団のドンカラス':"Team Rocket's Honchkrow",'ロケット団のミュウツーex':"Team Rocket's Mewtwo ex",'キチキギスex':'Fezandipiti ex','ニャースex':'Meowth ex','マシマシラ':'Munkidori','ラティアスex':'Latias ex','モモワロウex':'Pecharunt ex','ゲノセクトex':'Genesect ex','シェイミ':'Shaymin','ソルロック':'Solrock','ルナトーン':'Lunatone','被りなし':'No shared Pokémon'};
+const uiText={ja:{title:'Pokémon Team masters 2027 Seoul環境',subtitle:'デッキ選択ツール',pick:'デッキを選ぶ',reset:'選択をすべて解除',search:'デッキ名で検索（例：ドラパ、ルカリオ）',only:'選択可能なデッキのみ表示',slot:i=>`${i}デッキ目`,empty:'まだ選択されていません',remove:'このデッキを解除',change:'（変更）',stats:n=>`選択中：${n} / 3 デッキ`,complete:'✓ 3デッキのシステムポケモン重複なし。組み合わせが完成しました。',incomplete:'次に選ぶデッキは、使用済みシステムポケモンと重複しないものだけ選択できます。',used:'使用中',unused:'未使用',outside:'Tier外',count:(a,b,n,total)=>`表示 ${a}〜${b} 件 / 該当 ${n} 件（全 ${total} 種類）`,taken:'他の枠で選択済み',clash:'重複：',current:'この枠で選択中',available:'選択可能',none:'該当するデッキはありません。',prev:'‹ 前へ',next:'次へ ›',page:(n,total)=>`${n} / ${total} ページ`,error:'データの読み込みに失敗しました。ページを再読み込みしてください。',badData:'データ形式が不正です',loadError:'読み込みエラー：'},en:{title:'Pokémon Team Masters 2027 · Seoul Meta',subtitle:'Team Deck Selector',pick:'Choose a Deck',reset:'Clear All Selections',search:'Search decks (e.g., Dragapult, Lucario)',only:'Show available decks only',slot:i=>`Deck ${i}`,empty:'Not selected yet',remove:'Remove this deck',change:'(change)',stats:n=>`Selected: ${n} / 3 decks`,complete:'✓ All 3 decks selected with no shared system Pokémon.',incomplete:'Only decks with no overlapping system Pokémon can be selected.',used:'In use',unused:'Available',outside:'Unranked',count:(a,b,n,total)=>`Showing ${a}–${b} of ${n} matches (${total} total)`,taken:'Selected in another slot',clash:'Overlap: ',current:'Selected in this slot',available:'Selectable',none:'No matching decks.',prev:'‹ Previous',next:'Next ›',page:(n,total)=>`Page ${n} / ${total}`,error:'Failed to load deck data. Please refresh.',badData:'Invalid deck data format',loadError:'Load error: '}};
+let language='ja';const t=()=>uiText[language];
+const translatePart=s=>enNames[s]||s;
+const localizedName=s=>language==='en'?s.split('&').map(translatePart).join('&'):s;
+const localizedSystem=s=>language==='en'?translatePart(s):s;
+function applyLanguage(){document.documentElement.lang=language;$('heroTitle').textContent=t().title;$('heroSubtitle').textContent=t().subtitle;$('pickHeading').textContent=t().pick;$('reset').textContent=t().reset;$('search').placeholder=t().search;$('onlyokLabel').textContent=t().only;$('footerTitle').textContent=t().title;document.querySelectorAll('[data-lang]').forEach(b=>{b.classList.toggle('active',b.dataset.lang===language);b.setAttribute('aria-pressed',String(b.dataset.lang===language))});render()}
+document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>{if(language===b.dataset.lang)return;language=b.dataset.lang;currentPage=1;applyLanguage()}));
 const DATA_URL='decks.json';
 let systemOrder=[];
 let selected=[null,null,null], target=0;let activeTier='all',currentPage=1;const PAGE_SIZE=30;
@@ -54,7 +66,7 @@ const compareJa=(a,b)=>jaCollator.compare(a,b);
 const isExTag=s=>/ex$/i.test(s);
 const compareSystems=(a,b)=>Number(isExTag(b))-Number(isExTag(a))||compareJa(a,b);
 const sortedSystems=systems=>[...systems].sort(compareSystems);
-const displayDeckName=name=>name.split('&').map((part,i)=>(i?'&':'')+escapeHtml(part)).join('<br>');
+const displayDeckName=name=>localizedName(name).split('&').map((part,i)=>(i?'&':'')+escapeHtml(part)).join('<br>');
 const primaryName=name=>name.split('&')[0];
 const componentCount=name=>name.split('&').length;
 function compareDecks(a,b){
@@ -80,25 +92,25 @@ function clash(d,slot){let used=usedSystems(slot);return d.systems.filter(s=>use
 function freeSlot(){let n=selected.findIndex(x=>!x);return n<0?0:n}
 function pick(d){let slot=target;if(selected[slot]?.id===d.id)return;let already=selected.findIndex((x,i)=>i!==slot&&x?.id===d.id);if(already>=0)return;if(clash(d,slot).length)return;selected[slot]=d;target=freeSlot();render()}
 function clearSlot(i){selected[i]=null;target=i;render()}
-function render(){let used=usedSystems();$('slots').innerHTML=selected.map((d,i)=>`<div class="slot ${d?'filled':''}"><div class="slothead">${i+1}デッキ目</div>${d?`<div class="slotbody"><div class="slotthumbs ${d.images.length>1?'duo':''}">${d.images.map(url=>`<img src="${escapeHtml(url)}" alt="">`).join('')}</div><div><div class="slotname">${displayDeckName(d.name)}</div><div class="small">${d.systems.length?escapeHtml(sortedSystems(d.systems).join(' / ')) : ''}</div><button class="remove" data-clear="${i}">このデッキを解除</button></div></div>`:`<div class="empty">まだ選択されていません</div>`}</div>`).join('');
+function render(){let used=usedSystems();$('slots').innerHTML=selected.map((d,i)=>`<div class="slot ${d?'filled':''}"><div class="slothead">${t().slot(i+1)}</div>${d?`<div class="slotbody"><div class="slotthumbs ${d.images.length>1?'duo':''}">${d.images.map(url=>`<img src="${escapeHtml(url)}" alt="">`).join('')}</div><div><div class="slotname">${displayDeckName(d.name)}</div><div class="small">${d.systems.length?escapeHtml(sortedSystems(d.systems).map(localizedSystem).join(' / ')) : ''}</div><button class="remove" data-clear="${i}">${t().remove}</button></div></div>`:`<div class="empty">${t().empty}</div>`}</div>`).join('');
 $('slots').querySelectorAll('[data-clear]').forEach(b=>b.onclick=()=>clearSlot(+b.dataset.clear));
-$('pickslot').innerHTML=selected.map((d,i)=>`<button class="${target===i?'active':''}" data-slot="${i}">${i+1}デッキ目 ${d?'（変更）':''}</button>`).join('');$('pickslot').querySelectorAll('button').forEach(b=>b.onclick=()=>{target=+b.dataset.slot;render()});
-$('stats').textContent=`選択中：${selected.filter(Boolean).length} / 3 デッキ`;
-$('summary').textContent=selected.every(Boolean)?'✓ 3デッキのシステムポケモン重複なし。組み合わせが完成しました。':'次に選ぶデッキは、使用済みシステムポケモンと重複しないものだけ選択できます。';
-$('used').innerHTML=systemOrder.map(s=>`<span class="chip ${used.has(s)?'used':''}">${escapeHtml(s)} ${used.has(s)?'使用中':'未使用'}</span>`).join('');renderDecks()}
+$('pickslot').innerHTML=selected.map((d,i)=>`<button class="${target===i?'active':''}" data-slot="${i}">${t().slot(i+1)} ${d?t().change:''}</button>`).join('');$('pickslot').querySelectorAll('button').forEach(b=>b.onclick=()=>{target=+b.dataset.slot;render()});
+$('stats').textContent=t().stats(selected.filter(Boolean).length);
+$('summary').textContent=selected.every(Boolean)?t().complete:t().incomplete;
+$('used').innerHTML=systemOrder.map(s=>`<span class="chip ${used.has(s)?'used':''}">${escapeHtml(localizedSystem(s))} ${used.has(s)?t().used:t().unused}</span>`).join('');renderDecks()}
 function renderDecks(){
  const q=$('search').value.trim().toLocaleLowerCase(),only=$('onlyok').checked;
  const tabs=[['all','All'],['1','Tier 1'],['2','Tier 2'],['3','Tier 3'],['4','Tier外']];
  $('tiertabs').innerHTML=tabs.map(([id,label])=>{const count=DATA.decks.filter(d=>id==='all'||String(d.tier||4)===id).length;return `<button type="button" data-tier="${id}" class="${activeTier===id?'active':''}" aria-pressed="${activeTier===id}">${label}<span class="tabcount">${count}</span></button>`}).join('');
  $('tiertabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{activeTier=b.dataset.tier;currentPage=1;renderDecks()});
- let candidates=DATA.decks.filter(d=>(activeTier==='all'||String(d.tier||4)===activeTier)&&(`${d.name} ${d.originalName||''} ${d.card||''}`).toLocaleLowerCase().includes(q));
+ let candidates=DATA.decks.filter(d=>(activeTier==='all'||String(d.tier||4)===activeTier)&&(`${d.name} ${d.originalName||''} ${d.card||''} ${localizedName(d.name)} ${d.systems.map(localizedSystem).join(' ')}`).toLocaleLowerCase().includes(q));
  let visible=candidates.filter(d=>{let taken=selected.some((x,i)=>i!==target&&x?.id===d.id);return !only||(!taken&&!clash(d,target).length)});
  const pages=Math.max(1,Math.ceil(visible.length/PAGE_SIZE));currentPage=Math.max(1,Math.min(currentPage,pages));
  const paged=visible.slice((currentPage-1)*PAGE_SIZE,currentPage*PAGE_SIZE);
- $('resultcount').textContent=`表示 ${visible.length?((currentPage-1)*PAGE_SIZE+1):0}〜${Math.min(currentPage*PAGE_SIZE,visible.length)} 件 / 該当 ${visible.length} 件（全 ${DATA.decks.length} 種類）`;
- $('decks').innerHTML=paged.map(d=>{let conflicts=clash(d,target),taken=selected.some((x,i)=>i!==target&&x?.id===d.id),isCurrent=selected[target]?.id===d.id,blocked=conflicts.length||taken;let why=taken?'他の枠で選択済み':conflicts.length?'重複：'+conflicts.join('・'):isCurrent?'この枠で選択中':'選択可能';return `<button class="deck ${isCurrent?'selected':''}" data-id="${escapeHtml(d.id)}" ${blocked?'disabled':''}><div class="decktop"><div class="thumbs ${d.images.length>1?'duo':''}">${d.images.map(url=>`<img src="${escapeHtml(url)}" loading="lazy" alt="">`).join('')}</div><div><div class="tierbadge tier${d.tier||4}">${d.tier===4?'Tier外':'Tier '+d.tier}</div><div class="deckname">${displayDeckName(d.name)}</div></div></div><div class="chips">${sortedSystems(d.systems).map(s=>`<span class="chip">${escapeHtml(s)}</span>`).join('')}</div><div class="${blocked?'reason':'ok'}">${escapeHtml(why)}</div></button>`}).join('')||'<div class="emptyresults">該当するデッキはありません。</div>';
+ $('resultcount').textContent=t().count(visible.length?((currentPage-1)*PAGE_SIZE+1):0,Math.min(currentPage*PAGE_SIZE,visible.length),visible.length,DATA.decks.length);
+ $('decks').innerHTML=paged.map(d=>{let conflicts=clash(d,target),taken=selected.some((x,i)=>i!==target&&x?.id===d.id),isCurrent=selected[target]?.id===d.id,blocked=conflicts.length||taken;let why=taken?t().taken:conflicts.length?t().clash+conflicts.map(localizedSystem).join(' · '):isCurrent?t().current:t().available;return `<button class="deck ${isCurrent?'selected':''}" data-id="${escapeHtml(d.id)}" ${blocked?'disabled':''}><div class="decktop"><div class="thumbs ${d.images.length>1?'duo':''}">${d.images.map(url=>`<img src="${escapeHtml(url)}" loading="lazy" alt="">`).join('')}</div><div><div class="tierbadge tier${d.tier||4}">${d.tier===4?t().outside:'Tier '+d.tier}</div><div class="deckname">${displayDeckName(d.name)}</div></div></div><div class="chips">${sortedSystems(d.systems).map(s=>`<span class="chip">${escapeHtml(localizedSystem(s))}</span>`).join('')}</div><div class="${blocked?'reason':'ok'}">${escapeHtml(why)}</div></button>`}).join('')||'<div class="emptyresults">${t().none}</div>';
  $('decks').querySelectorAll('button[data-id]').forEach(b=>b.onclick=()=>pick(DATA.decks.find(d=>d.id===b.dataset.id)));
- $('pagination').innerHTML=pages<=1?'':`<button data-page="${currentPage-1}" ${currentPage===1?'disabled':''}>‹ 前へ</button><span>${currentPage} / ${pages} ページ</span><button data-page="${currentPage+1}" ${currentPage===pages?'disabled':''}>次へ ›</button>`;
+ $('pagination').innerHTML=pages<=1?'':`<button data-page="${currentPage-1}" ${currentPage===1?'disabled':''}>${t().prev}</button><span>${t().page(currentPage,pages)}</span><button data-page="${currentPage+1}" ${currentPage===pages?'disabled':''}>${t().next}</button>`;
  $('pagination').querySelectorAll('button[data-page]').forEach(b=>b.onclick=()=>{currentPage=+b.dataset.page;renderDecks();$('tiertabs').scrollIntoView({behavior:'smooth',block:'start'})});
 }
 $('search').oninput=()=>{currentPage=1;renderDecks()};$('onlyok').onchange=()=>{currentPage=1;renderDecks()};$('reset').onclick=()=>{selected=[null,null,null];target=0;render()};async function loadData(){
@@ -106,15 +118,15 @@ $('search').oninput=()=>{currentPage=1;renderDecks()};$('onlyok').onchange=()=>{
   const response=await fetch(DATA_URL,{cache:'no-store'});
   if(!response.ok)throw new Error('HTTP '+response.status);
   const incoming=await response.json();
-  if(!Array.isArray(incoming.groups)||!Array.isArray(incoming.decks))throw new Error('データ形式が不正です');
+  if(!Array.isArray(incoming.groups)||!Array.isArray(incoming.decks))throw new Error(t().badData);
   DATA=incoming;
   DATA.decks.sort(compareDecks);
   systemOrder=DATA.groups.filter(g=>g.name!=='被りなし').map(g=>g.name).sort(compareSystems);
   render();
  }catch(err){
-  $('resultcount').textContent='データの読み込みに失敗しました。ページを再読み込みしてください。';
-  $('summary').textContent='読み込みエラー：'+err.message;
+  $('resultcount').textContent=t().error;
+  $('summary').textContent=t().loadError+err.message;
  }
 }
-loadData();
+applyLanguage();loadData();
 </script></body></html>
