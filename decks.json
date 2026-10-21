@@ -1,0 +1,616 @@
+{
+  "groups": [
+    {
+      "name": "キチキギスex",
+      "color": "#bf1d66"
+    },
+    {
+      "name": "ニャースex",
+      "color": "#bd8220"
+    },
+    {
+      "name": "マシマシラ",
+      "color": "#7340a8"
+    },
+    {
+      "name": "メガガルーラex",
+      "color": "#ac492f"
+    },
+    {
+      "name": "ノココッチ",
+      "color": "#679325"
+    },
+    {
+      "name": "ラティアスex",
+      "color": "#c62b51"
+    },
+    {
+      "name": "モモワロウex",
+      "color": "#99408b"
+    },
+    {
+      "name": "ゲノセクトex",
+      "color": "#117f86"
+    },
+    {
+      "name": "シェイミ",
+      "color": "#399044"
+    },
+    {
+      "name": "ソルロック",
+      "color": "#b66b24"
+    },
+    {
+      "name": "ヨノワール(カースドボム)",
+      "color": "#4c478f"
+    },
+    {
+      "name": "被りなし",
+      "color": "#1e548e"
+    }
+  ],
+  "decks": [
+    {
+      "name": "ドラパ(ボム)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SV6/045772_P_DORAPARUTOEX.jpg"
+      ],
+      "card": "ドラパルトex",
+      "systems": [
+        "キチキギスex",
+        "ニャースex",
+        "マシマシラ",
+        "ヨノワール(カースドボム)"
+      ]
+    },
+    {
+      "name": "ドラパ(ノココッチ)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SV6/045772_P_DORAPARUTOEX.jpg"
+      ],
+      "card": "ドラパルトex",
+      "systems": [
+        "キチキギスex",
+        "ニャースex",
+        "マシマシラ",
+        "ノココッチ"
+      ]
+    },
+    {
+      "name": "ドラパ(バシャ)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SV6/045772_P_DORAPARUTOEX.jpg"
+      ],
+      "card": "ドラパルトex",
+      "systems": [
+        "キチキギスex",
+        "ニャースex",
+        "マシマシラ"
+      ]
+    },
+    {
+      "name": "ゾロアーク",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M2a/048634_P_NNOZOROAKUEX.jpg"
+      ],
+      "card": "Nのゾロアークex",
+      "systems": [
+        "キチキギスex",
+        "マシマシラ",
+        "モモワロウex"
+      ]
+    },
+    {
+      "name": "ヤドキング",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SV7/045978_P_YADOKINGU.jpg"
+      ],
+      "card": "ヤドキング",
+      "systems": [
+        "キチキギスex",
+        "ニャースex",
+        "メガガルーラex"
+      ]
+    },
+    {
+      "name": "メガレックウザ",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M6/050396_P_MREKKUUZAIEKKUSU.jpg"
+      ],
+      "card": "メガレックウザex",
+      "systems": [
+        "キチキギスex",
+        "ニャースex",
+        "メガガルーラex",
+        "ラティアスex"
+      ]
+    },
+    {
+      "name": "メガドリュウズ",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M5/050282_P_MDORIXYUUZUEX.jpg"
+      ],
+      "card": "メガドリュウズex",
+      "systems": [
+        "キチキギスex",
+        "ゲノセクトex"
+      ]
+    },
+    {
+      "name": "タケルライコ",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SV8a/046785_P_TAKERURAIKOEX.jpg"
+      ],
+      "card": "タケルライコex",
+      "systems": [
+        "キチキギスex",
+        "ニャースex",
+        "メガガルーラex",
+        "ラティアスex"
+      ]
+    },
+    {
+      "name": "カミツオロチ",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SV8a/046671_P_KAMITSUOROCHIEX.jpg"
+      ],
+      "card": "カミツオロチex",
+      "systems": [
+        "キチキギスex",
+        "ニャースex"
+      ]
+    },
+    {
+      "name": "オリーヴァ",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/MC/048787_P_ORIVUAEX.jpg"
+      ],
+      "card": "オリーヴァex",
+      "systems": [
+        "キチキギスex",
+        "ニャースex"
+      ]
+    },
+    {
+      "name": "ゲッコウガ",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SV5a/045621_P_GEKKOUGAEX.jpg"
+      ],
+      "card": "ゲッコウガex",
+      "systems": [
+        "キチキギスex",
+        "ニャースex"
+      ]
+    },
+    {
+      "name": "ブイズバレット",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SV8a/046787_P_IBUIEX.jpg"
+      ],
+      "card": "イーブイex",
+      "systems": [
+        "キチキギスex"
+      ]
+    },
+    {
+      "name": "ガルーラバレット",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M1S/047847_P_MGARURAEX.jpg"
+      ],
+      "card": "メガガルーラex",
+      "systems": [
+        "キチキギスex",
+        "ニャースex",
+        "メガガルーラex",
+        "ラティアスex"
+      ]
+    },
+    {
+      "name": "ストリンダーバレット",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M2/048397_P_SUTORINDA.jpg"
+      ],
+      "card": "ストリンダー",
+      "systems": [
+        "キチキギスex",
+        "モモワロウex"
+      ]
+    },
+    {
+      "name": "フーディン",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M1S/047834_P_FUDEIN.jpg"
+      ],
+      "card": "フーディン",
+      "systems": [
+        "キチキギスex",
+        "シェイミ"
+      ]
+    },
+    {
+      "name": "メガサメハダー",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M2/048391_P_MSAMEHADAEX.jpg"
+      ],
+      "card": "メガサメハダーex",
+      "systems": [
+        "キチキギスex",
+        "モモワロウex"
+      ]
+    },
+    {
+      "name": "メガフシギバナ",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M1L/047736_P_MFUSHIGIBANAEX.jpg"
+      ],
+      "card": "メガフシギバナex",
+      "systems": [
+        "キチキギスex",
+        "ニャースex"
+      ]
+    },
+    {
+      "name": "ソウブレイズ",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M2a/048553_P_SOUBUREIZUEX.jpg"
+      ],
+      "card": "ソウブレイズex",
+      "systems": [
+        "キチキギスex"
+      ]
+    },
+    {
+      "name": "フーディン(ボム)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M1S/047834_P_FUDEIN.jpg"
+      ],
+      "card": "フーディン",
+      "systems": [
+        "キチキギスex",
+        "ヨノワール(カースドボム)"
+      ]
+    },
+    {
+      "name": "ホップバレット",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/MC/049243_P_HOPPUNOZASHIANEX.jpg"
+      ],
+      "card": "ホップのザシアンex",
+      "systems": [
+        "キチキギスex",
+        "ニャースex",
+        "ラティアスex"
+      ]
+    },
+    {
+      "name": "ボムファイアロー",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M6/050400_P_FUAIAROIEKKUSU.jpg"
+      ],
+      "card": "ファイアローex",
+      "systems": [
+        "キチキギスex",
+        "ニャースex",
+        "メガガルーラex",
+        "ラティアスex",
+        "ヨノワール(カースドボム)"
+      ]
+    },
+    {
+      "name": "ダイゴのメタグロス",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SVOD/047278_P_DAIGONOMETAGUROSUEX.jpg"
+      ],
+      "card": "ダイゴのメタグロスex",
+      "systems": [
+        "キチキギスex",
+        "ニャースex",
+        "ゲノセクトex"
+      ]
+    },
+    {
+      "name": "ニダンギルバレット",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M3/049689_P_NIDANGIRU.jpg"
+      ],
+      "card": "ニダンギル",
+      "systems": [
+        "キチキギスex",
+        "ゲノセクトex"
+      ]
+    },
+    {
+      "name": "メガスターミーメガユキメノコ",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M3/049654_P_MSUTAMIEX.jpg",
+        "https://www.pokemon-card.com/assets/images/card_images/large/M2a/048558_P_MYUKIMENOKOEX.jpg"
+      ],
+      "card": "メガスターミーex ＋ メガユキメノコex",
+      "systems": [
+        "ニャースex"
+      ]
+    },
+    {
+      "name": "メガライボルトメガシビルドン",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M1S/047828_P_MRAIBORUTOEX.jpg",
+        "https://www.pokemon-card.com/assets/images/card_images/large/M2a/048571_P_MSHIBIRUDONEX.jpg"
+      ],
+      "card": "メガライボルトex ＋ メガシビルドンex",
+      "systems": [
+        "ニャースex"
+      ]
+    },
+    {
+      "name": "ボムドータクン",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SV5K/045175_P_DOTAKUN.jpg"
+      ],
+      "card": "ドータクン",
+      "systems": [
+        "ニャースex",
+        "メガガルーラex",
+        "ラティアスex",
+        "ヨノワール(カースドボム)"
+      ]
+    },
+    {
+      "name": "オーロンゲ",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SVOM/047259_P_MARIINOORONGEEX.jpg"
+      ],
+      "card": "マリィのオーロンゲex",
+      "systems": [
+        "マシマシラ",
+        "シェイミ"
+      ]
+    },
+    {
+      "name": "イワパレス(やすさん型)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/MC/048762_P_IWAPARESU.jpg"
+      ],
+      "card": "イワパレス",
+      "systems": [
+        "マシマシラ"
+      ]
+    },
+    {
+      "name": "イワパレス(ガルーラ型)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/MC/048762_P_IWAPARESU.jpg"
+      ],
+      "card": "イワパレス",
+      "systems": [
+        "メガガルーラex"
+      ]
+    },
+    {
+      "name": "メガリザードン",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M2/048353_P_MRIZADONXEX.jpg"
+      ],
+      "card": "メガリザードンXex",
+      "systems": [
+        "メガガルーラex",
+        "ラティアスex"
+      ]
+    },
+    {
+      "name": "ばけがくれ(ミカルゲ抜き)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M5/050256_P_DADARIN.jpg"
+      ],
+      "card": "ダダリン",
+      "systems": [
+        "ノココッチ",
+        "ラティアスex",
+        "シェイミ"
+      ]
+    },
+    {
+      "name": "フーディン(スタン)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M1S/047834_P_FUDEIN.jpg"
+      ],
+      "card": "フーディン",
+      "systems": [
+        "ノココッチ"
+      ]
+    },
+    {
+      "name": "メガミミロップ(ノココッチ型)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M2/048412_P_MMIMIROPPUEX.jpg"
+      ],
+      "card": "メガミミロップex",
+      "systems": [
+        "ノココッチ"
+      ]
+    },
+    {
+      "name": "メガミミロップ(メガユキメノコノココッチ型)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M2/048412_P_MMIMIROPPUEX.jpg",
+        "https://www.pokemon-card.com/assets/images/card_images/large/M2a/048558_P_MYUKIMENOKOEX.jpg"
+      ],
+      "card": "メガミミロップex ＋ メガユキメノコex",
+      "systems": [
+        "ノココッチ"
+      ]
+    },
+    {
+      "name": "メガルカリオ(ノココッチ型)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M2a/048614_P_MRUKARIOEX.jpg"
+      ],
+      "card": "メガルカリオex",
+      "systems": [
+        "ノココッチ",
+        "ソルロック"
+      ]
+    },
+    {
+      "name": "ひびきのバクフーン",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SV9a/047312_P_HIBIKINOBAKUFUN.jpg"
+      ],
+      "card": "ヒビキのバクフーン",
+      "systems": [
+        "ノココッチ"
+      ]
+    },
+    {
+      "name": "ばけがくれ(ミカルゲ入り)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M5/050256_P_DADARIN.jpg"
+      ],
+      "card": "ダダリン",
+      "systems": [
+        "ラティアスex",
+        "シェイミ"
+      ]
+    },
+    {
+      "name": "おまつりおんど",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SV6/045703_P_KAMITCHIXYU.jpg"
+      ],
+      "card": "カミッチュ",
+      "systems": [
+        "シェイミ"
+      ]
+    },
+    {
+      "name": "メガルカリオ(スタン)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M2a/048614_P_MRUKARIOEX.jpg"
+      ],
+      "card": "メガルカリオex",
+      "systems": [
+        "ソルロック"
+      ]
+    },
+    {
+      "name": "イイネイヌ",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/MC/049142_P_IINEINU.jpg"
+      ],
+      "card": "イイネイヌ",
+      "systems": [
+        "ソルロック"
+      ]
+    },
+    {
+      "name": "ガブリアス",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SV9a/047339_P_SHIRONANOGABURIASUEX.jpg"
+      ],
+      "card": "シロナのガブリアスex",
+      "systems": []
+    },
+    {
+      "name": "R団のドンカラス",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M2a/048625_P_ROKETTODANNODONKARASU.jpg"
+      ],
+      "card": "ロケット団のドンカラス",
+      "systems": []
+    },
+    {
+      "name": "R団のミュウツー",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SV10/047432_P_ROKETTODANNOMIXYUUTSUEX.jpg"
+      ],
+      "card": "ロケット団のミュウツーex",
+      "systems": []
+    },
+    {
+      "name": "メガシャンデラ",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M5/050255_P_MSHIXYANDERAEX.jpg"
+      ],
+      "card": "メガシャンデラex",
+      "systems": []
+    },
+    {
+      "name": "オリーヴァメガユキメノコ",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/MC/048787_P_ORIVUAEX.jpg",
+        "https://www.pokemon-card.com/assets/images/card_images/large/M2a/048558_P_MYUKIMENOKOEX.jpg"
+      ],
+      "card": "オリーヴァex ＋ メガユキメノコex",
+      "systems": []
+    },
+    {
+      "name": "ゾロアークex(キチキギスex抜き)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M2a/048634_P_NNOZOROAKUEX.jpg"
+      ],
+      "card": "Nのゾロアークex",
+      "systems": [
+        "マシマシラ",
+        "モモワロウex"
+      ]
+    },
+    {
+      "name": "メガドリュウズex(キチキギスex抜き)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M5/050282_P_MDORIXYUUZUEX.jpg"
+      ],
+      "card": "メガドリュウズex",
+      "systems": [
+        "ゲノセクトex"
+      ]
+    },
+    {
+      "name": "フーディン(シェイミ抜き)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M1S/047834_P_FUDEIN.jpg"
+      ],
+      "card": "フーディン",
+      "systems": [
+        "キチキギスex"
+      ]
+    },
+    {
+      "name": "フーディン(キチキギスex抜き)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M1S/047834_P_FUDEIN.jpg"
+      ],
+      "card": "フーディン",
+      "systems": [
+        "シェイミ"
+      ]
+    },
+    {
+      "name": "フーディン(シェイミ、キチキギスex抜き)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M1S/047834_P_FUDEIN.jpg"
+      ],
+      "card": "フーディン",
+      "systems": []
+    },
+    {
+      "name": "ニダンギルバレット(キチキギスex抜き)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M3/049689_P_NIDANGIRU.jpg"
+      ],
+      "card": "ニダンギル",
+      "systems": [
+        "ゲノセクトex"
+      ]
+    },
+    {
+      "name": "ゾロアークex(キチキギスex、ニャースex抜き)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M2a/048634_P_NNOZOROAKUEX.jpg"
+      ],
+      "card": "Nのゾロアークex",
+      "systems": [
+        "マシマシラ",
+        "モモワロウex"
+      ]
+    }
+  ]
+}
