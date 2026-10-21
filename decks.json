@@ -177,6 +177,15 @@
       "tier": 2
     },
     {
+      "name": "おまつりおんど(シェイミ抜き)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SV6/045703_P_KAMITCHIXYU.jpg"
+      ],
+      "card": "カミッチュ",
+      "systems": [],
+      "tier": 2
+    },
+    {
       "name": "メガレックウザ",
       "images": [
         "https://www.pokemon-card.com/assets/images/card_images/large/M6/050396_P_MREKKUUZAIEKKUSU.jpg"
@@ -265,6 +274,18 @@
       "tier": 3
     },
     {
+      "name": "ばけがくれ(ミカルゲ抜き・シェイミ抜き)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M5/050256_P_DADARIN.jpg"
+      ],
+      "card": "ダダリン",
+      "systems": [
+        "ノココッチ",
+        "ラティアスex"
+      ],
+      "tier": 3
+    },
+    {
       "name": "ばけがくれ(ミカルゲ入り)",
       "images": [
         "https://www.pokemon-card.com/assets/images/card_images/large/M5/050256_P_DADARIN.jpg"
@@ -273,6 +294,17 @@
       "systems": [
         "ラティアスex",
         "シェイミ"
+      ],
+      "tier": 3
+    },
+    {
+      "name": "ばけがくれ(ミカルゲ入り・シェイミ抜き)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M5/050256_P_DADARIN.jpg"
+      ],
+      "card": "ダダリン",
+      "systems": [
+        "ラティアスex"
       ],
       "tier": 3
     },
@@ -398,6 +430,17 @@
       ],
       "card": "フーディン",
       "systems": [],
+      "tier": 4
+    },
+    {
+      "name": "フーディン(ドデカバシ)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/M1S/047834_P_FUDEIN.jpg"
+      ],
+      "card": "フーディン",
+      "systems": [
+        "キチキギスex"
+      ],
       "tier": 4
     },
     {
@@ -550,7 +593,18 @@
       "tier": 4
     },
     {
-      "name": "イワパレス(やすさん型)",
+      "name": "オーロンゲ(シェイミ抜き)",
+      "images": [
+        "https://www.pokemon-card.com/assets/images/card_images/large/SVOM/047259_P_MARIINOORONGEEX.jpg"
+      ],
+      "card": "マリィのオーロンゲex",
+      "systems": [
+        "マシマシラ"
+      ],
+      "tier": 4
+    },
+    {
+      "name": "イワパレス(マシラ型)",
       "images": [
         "https://www.pokemon-card.com/assets/images/card_images/large/MC/048762_P_IWAPARESU.jpg"
       ],
