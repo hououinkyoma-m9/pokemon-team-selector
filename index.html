@@ -43,16 +43,42 @@
 </style></head><body><header class="hero"><h1>Pokémon Team masters 2027 Seoul環境</h1><p>デッキ選択ツール</p></header><main class="container"><div class="slots" id="slots"></div><section class="panel"><div class="status"><div class="stats" id="stats"></div><button class="reset" id="reset">選択をすべて解除</button></div><div id="summary" class="summary"></div><div class="chips" id="used"></div></section><section class="panel"><h2>デッキを選ぶ</h2><div class="selectslot" id="pickslot"></div><div class="controls"><input type="search" id="search" placeholder="デッキ名で検索（例：ドラパ、ルカリオ）"><label><input type="checkbox" id="onlyok" checked> 選択可能なデッキのみ表示</label></div><div class="tiertabs" id="tiertabs" role="group" aria-label="Tierで絞り込む"></div><div class="listbar"><div class="stats" id="resultcount"></div></div><div class="grid" id="decks"></div><nav class="pagination" id="pagination" aria-label="デッキ一覧のページ切り替え"></nav></section></main><footer class="sitefooter"><div>Pokémon Team masters 2027 Seoul環境</div><small>© 2026 Fan-made deck selection tool · Unofficial</small></footer><script>
 let DATA={groups:[],decks:[]};
 const DATA_URL='decks.json';
-let systemOrder=DATA.groups.filter(g=>g.name!=='被りなし').map(g=>g.name);
+let systemOrder=DATA.groups.filter(g=>g.name!=='被りなし').map(g=>g.name).sort(compareSystems);
 let selected=[null,null,null], target=0;let activeTier='all',currentPage=1;const PAGE_SIZE=30;
 const $=id=>document.getElementById(id);
 const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+// Japanese alphabetical order (五十音順), with ex tags first.
+const jaCollator=new Intl.Collator('ja',{sensitivity:'base',numeric:true});
+const compareJa=(a,b)=>jaCollator.compare(a,b);
+const isExTag=s=>/ex$/i.test(s);
+const compareSystems=(a,b)=>Number(isExTag(b))-Number(isExTag(a))||compareJa(a,b);
+const sortedSystems=systems=>[...systems].sort(compareSystems);
+const primaryName=name=>name.split('&')[0];
+const componentCount=name=>name.split('&').length;
+function compareDecks(a,b){
+ const tier=(a.tier||4)-(b.tier||4);
+ if(tier)return tier;
+ const family=compareJa(primaryName(a.name),primaryName(b.name));
+ if(family)return family;
+ // In the same deck family: single-card builds first, then two-card builds.
+ const parts=componentCount(a.name)-componentCount(b.name);
+ if(parts)return parts;
+ // More system tags first within the same deck build.
+ const deck=compareJa(a.name,b.name);
+ if(deck)return deck;
+ const tags=b.systems.length-a.systems.length;
+ if(tags)return tags;
+ const tagNames=compareJa(sortedSystems(a.systems).join('/'),sortedSystems(b.systems).join('/'));
+ if(tagNames)return tagNames;
+ return compareJa(a.id,b.id);
+}
+
 function usedSystems(except=-1){return new Set(selected.flatMap((d,i)=>i===except||!d?[]:d.systems))}
 function clash(d,slot){let used=usedSystems(slot);return d.systems.filter(s=>used.has(s))}
 function freeSlot(){let n=selected.findIndex(x=>!x);return n<0?0:n}
 function pick(d){let slot=target;if(selected[slot]?.id===d.id)return;let already=selected.findIndex((x,i)=>i!==slot&&x?.id===d.id);if(already>=0)return;if(clash(d,slot).length)return;selected[slot]=d;target=freeSlot();render()}
 function clearSlot(i){selected[i]=null;target=i;render()}
-function render(){let used=usedSystems();$('slots').innerHTML=selected.map((d,i)=>`<div class="slot ${d?'filled':''}"><div class="slothead">${i+1}デッキ目</div>${d?`<div class="slotbody"><div class="slotthumbs ${d.images.length>1?'duo':''}">${d.images.map(url=>`<img src="${escapeHtml(url)}" alt="">`).join('')}</div><div><div class="slotname">${escapeHtml(d.name)}</div><div class="small">${d.systems.length?escapeHtml(d.systems.join(' / ')) : ''}</div><button class="remove" data-clear="${i}">このデッキを解除</button></div></div>`:`<div class="empty">まだ選択されていません</div>`}</div>`).join('');
+function render(){let used=usedSystems();$('slots').innerHTML=selected.map((d,i)=>`<div class="slot ${d?'filled':''}"><div class="slothead">${i+1}デッキ目</div>${d?`<div class="slotbody"><div class="slotthumbs ${d.images.length>1?'duo':''}">${d.images.map(url=>`<img src="${escapeHtml(url)}" alt="">`).join('')}</div><div><div class="slotname">${escapeHtml(d.name)}</div><div class="small">${d.systems.length?escapeHtml(sortedSystems(d.systems).join(' / ')) : ''}</div><button class="remove" data-clear="${i}">このデッキを解除</button></div></div>`:`<div class="empty">まだ選択されていません</div>`}</div>`).join('');
 $('slots').querySelectorAll('[data-clear]').forEach(b=>b.onclick=()=>clearSlot(+b.dataset.clear));
 $('pickslot').innerHTML=selected.map((d,i)=>`<button class="${target===i?'active':''}" data-slot="${i}">${i+1}デッキ目 ${d?'（変更）':''}</button>`).join('');$('pickslot').querySelectorAll('button').forEach(b=>b.onclick=()=>{target=+b.dataset.slot;render()});
 $('stats').textContent=`選択中：${selected.filter(Boolean).length} / 3 デッキ`;
@@ -68,7 +94,7 @@ function renderDecks(){
  const pages=Math.max(1,Math.ceil(visible.length/PAGE_SIZE));currentPage=Math.max(1,Math.min(currentPage,pages));
  const paged=visible.slice((currentPage-1)*PAGE_SIZE,currentPage*PAGE_SIZE);
  $('resultcount').textContent=`表示 ${visible.length?((currentPage-1)*PAGE_SIZE+1):0}〜${Math.min(currentPage*PAGE_SIZE,visible.length)} 件 / 該当 ${visible.length} 件（全 ${DATA.decks.length} 種類）`;
- $('decks').innerHTML=paged.map(d=>{let conflicts=clash(d,target),taken=selected.some((x,i)=>i!==target&&x?.id===d.id),isCurrent=selected[target]?.id===d.id,blocked=conflicts.length||taken;let why=taken?'他の枠で選択済み':conflicts.length?'重複：'+conflicts.join('・'):isCurrent?'この枠で選択中':'選択可能';return `<button class="deck ${isCurrent?'selected':''}" data-id="${escapeHtml(d.id)}" ${blocked?'disabled':''}><div class="decktop"><div class="thumbs ${d.images.length>1?'duo':''}">${d.images.map(url=>`<img src="${escapeHtml(url)}" loading="lazy" alt="">`).join('')}</div><div><div class="tierbadge tier${d.tier||4}">${d.tier===4?'Tier外':'Tier '+d.tier}</div><div class="deckname">${escapeHtml(d.name)}</div></div></div><div class="chips">${d.systems.map(s=>`<span class="chip">${escapeHtml(s)}</span>`).join('')}</div><div class="${blocked?'reason':'ok'}">${escapeHtml(why)}</div></button>`}).join('')||'<div class="emptyresults">該当するデッキはありません。</div>';
+ $('decks').innerHTML=paged.map(d=>{let conflicts=clash(d,target),taken=selected.some((x,i)=>i!==target&&x?.id===d.id),isCurrent=selected[target]?.id===d.id,blocked=conflicts.length||taken;let why=taken?'他の枠で選択済み':conflicts.length?'重複：'+conflicts.join('・'):isCurrent?'この枠で選択中':'選択可能';return `<button class="deck ${isCurrent?'selected':''}" data-id="${escapeHtml(d.id)}" ${blocked?'disabled':''}><div class="decktop"><div class="thumbs ${d.images.length>1?'duo':''}">${d.images.map(url=>`<img src="${escapeHtml(url)}" loading="lazy" alt="">`).join('')}</div><div><div class="tierbadge tier${d.tier||4}">${d.tier===4?'Tier外':'Tier '+d.tier}</div><div class="deckname">${escapeHtml(d.name)}</div></div></div><div class="chips">${sortedSystems(d.systems).map(s=>`<span class="chip">${escapeHtml(s)}</span>`).join('')}</div><div class="${blocked?'reason':'ok'}">${escapeHtml(why)}</div></button>`}).join('')||'<div class="emptyresults">該当するデッキはありません。</div>';
  $('decks').querySelectorAll('button[data-id]').forEach(b=>b.onclick=()=>pick(DATA.decks.find(d=>d.id===b.dataset.id)));
  $('pagination').innerHTML=pages<=1?'':`<button data-page="${currentPage-1}" ${currentPage===1?'disabled':''}>‹ 前へ</button><span>${currentPage} / ${pages} ページ</span><button data-page="${currentPage+1}" ${currentPage===pages?'disabled':''}>次へ ›</button>`;
  $('pagination').querySelectorAll('button[data-page]').forEach(b=>b.onclick=()=>{currentPage=+b.dataset.page;renderDecks();$('tiertabs').scrollIntoView({behavior:'smooth',block:'start'})});
@@ -80,8 +106,8 @@ $('search').oninput=()=>{currentPage=1;renderDecks()};$('onlyok').onchange=()=>{
   const incoming=await response.json();
   if(!Array.isArray(incoming.groups)||!Array.isArray(incoming.decks))throw new Error('データ形式が不正です');
   DATA=incoming;
-  DATA.decks.sort((a,b)=>(a.tier||4)-(b.tier||4));
-  systemOrder=DATA.groups.filter(g=>g.name!=='被りなし').map(g=>g.name);
+  DATA.decks.sort(compareDecks);
+  systemOrder=DATA.groups.filter(g=>g.name!=='被りなし').map(g=>g.name).sort(compareSystems);
   render();
  }catch(err){
   $('resultcount').textContent='データの読み込みに失敗しました。ページを再読み込みしてください。';
