@@ -43,7 +43,7 @@
 </style></head><body><header class="hero"><h1>Pokémon Team masters 2027 Seoul環境</h1><p>デッキ選択ツール</p></header><main class="container"><div class="slots" id="slots"></div><section class="panel"><div class="status"><div class="stats" id="stats"></div><button class="reset" id="reset">選択をすべて解除</button></div><div id="summary" class="summary"></div><div class="chips" id="used"></div></section><section class="panel"><h2>デッキを選ぶ</h2><div class="selectslot" id="pickslot"></div><div class="controls"><input type="search" id="search" placeholder="デッキ名で検索（例：ドラパ、ルカリオ）"><label><input type="checkbox" id="onlyok" checked> 選択可能なデッキのみ表示</label></div><div class="tiertabs" id="tiertabs" role="group" aria-label="Tierで絞り込む"></div><div class="listbar"><div class="stats" id="resultcount"></div></div><div class="grid" id="decks"></div><nav class="pagination" id="pagination" aria-label="デッキ一覧のページ切り替え"></nav></section></main><footer class="sitefooter"><div>Pokémon Team masters 2027 Seoul環境</div><small>© 2026 Fan-made deck selection tool · Unofficial</small></footer><script>
 let DATA={groups:[],decks:[]};
 const DATA_URL='decks.json';
-let systemOrder=DATA.groups.filter(g=>g.name!=='被りなし').map(g=>g.name).sort(compareSystems);
+let systemOrder=[];
 let selected=[null,null,null], target=0;let activeTier='all',currentPage=1;const PAGE_SIZE=30;
 const $=id=>document.getElementById(id);
 const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
